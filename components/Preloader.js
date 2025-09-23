@@ -8,7 +8,7 @@ export default function Preloader({ onComplete }) {
   const [isVisible, setIsVisible] = useState(true)
 
   useEffect(() => {
-    // Preloader duration - show for one animation cycle (about 3 seconds) then fade out
+    // Optimized preloader duration - 40% faster (1.8 seconds total)
     const timer = setTimeout(() => {
       // Add fade-out class before hiding
       const preloaderElement = document.querySelector('.preloader-container')
@@ -16,12 +16,12 @@ export default function Preloader({ onComplete }) {
         preloaderElement.classList.add('preloader-fade-out')
       }
       
-      // Wait for fade animation to complete before calling onComplete
+      // Faster fade animation
       setTimeout(() => {
         setIsVisible(false)
         onComplete()
-      }, 300) // Match the CSS transition duration - faster fade
-    }, 3000) // Total animation cycle time - 2x faster
+      }, 200) // Faster fade transition
+    }, 1800) // 40% faster: 3000ms → 1800ms
 
     return () => clearTimeout(timer)
   }, [onComplete])
@@ -57,9 +57,9 @@ export default function Preloader({ onComplete }) {
           spread={5}
           density={4}
           animation={{
-            vaporizeDuration: 1.5,
-            fadeInDuration: 0.5,
-            waitDuration: 0.25
+            vaporizeDuration: 0.9,
+            fadeInDuration: 0.3,
+            waitDuration: 0.15
           }}
           direction="left-to-right"
           alignment="center"
