@@ -124,10 +124,68 @@ export default function Home() {
                     </p>
                     <div className="cta-buttons" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
                       <Link href="/offers" style={{ textDecoration: 'none' }}>
-                        <BrandButton className="outline">Get Started</BrandButton>
+                        <button style={{
+                          background: 'transparent',
+                          border: '2px solid rgba(139, 95, 255, 0.6)',
+                          color: 'rgba(139, 95, 255, 0.9)',
+                          padding: '12px 24px',
+                          borderRadius: '8px',
+                          fontWeight: '600',
+                          fontSize: '16px',
+                          cursor: 'pointer',
+                          transition: 'all 0.3s ease',
+                          textTransform: 'uppercase',
+                          letterSpacing: '1px'
+                        }}
+                        onMouseOver={(e) => {
+                          e.target.style.background = 'rgba(139, 95, 255, 0.1)';
+                          e.target.style.borderColor = 'rgba(139, 95, 255, 0.8)';
+                          e.target.style.color = 'rgba(139, 95, 255, 1)';
+                          e.target.style.transform = 'translateY(-2px)';
+                          e.target.style.boxShadow = '0 5px 15px rgba(139, 95, 255, 0.3)';
+                        }}
+                        onMouseOut={(e) => {
+                          e.target.style.background = 'transparent';
+                          e.target.style.borderColor = 'rgba(139, 95, 255, 0.6)';
+                          e.target.style.color = 'rgba(139, 95, 255, 0.9)';
+                          e.target.style.transform = 'translateY(0)';
+                          e.target.style.boxShadow = 'none';
+                        }}
+                        >
+                          Get Started
+                        </button>
                       </Link>
                       <Link href="/about" style={{ textDecoration: 'none' }}>
-                        <BrandButton className="outline">Learn More</BrandButton>
+                        <button style={{
+                          background: 'transparent',
+                          border: '2px solid rgba(139, 95, 255, 0.6)',
+                          color: 'rgba(139, 95, 255, 0.9)',
+                          padding: '12px 24px',
+                          borderRadius: '8px',
+                          fontWeight: '600',
+                          fontSize: '16px',
+                          cursor: 'pointer',
+                          transition: 'all 0.3s ease',
+                          textTransform: 'uppercase',
+                          letterSpacing: '1px'
+                        }}
+                        onMouseOver={(e) => {
+                          e.target.style.background = 'rgba(139, 95, 255, 0.1)';
+                          e.target.style.borderColor = 'rgba(139, 95, 255, 0.8)';
+                          e.target.style.color = 'rgba(139, 95, 255, 1)';
+                          e.target.style.transform = 'translateY(-2px)';
+                          e.target.style.boxShadow = '0 5px 15px rgba(139, 95, 255, 0.3)';
+                        }}
+                        onMouseOut={(e) => {
+                          e.target.style.background = 'transparent';
+                          e.target.style.borderColor = 'rgba(139, 95, 255, 0.6)';
+                          e.target.style.color = 'rgba(139, 95, 255, 0.9)';
+                          e.target.style.transform = 'translateY(0)';
+                          e.target.style.boxShadow = 'none';
+                        }}
+                        >
+                          Learn More
+                        </button>
                       </Link>
                     </div>
                   </div>
@@ -203,10 +261,68 @@ export default function Home() {
                 </p>
                 <div className="cta-buttons" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
                   <Link href="/offers" style={{ textDecoration: 'none' }}>
-                    <BrandButton className="outline">Get Started</BrandButton>
+                    <button style={{
+                      background: 'transparent',
+                      border: '2px solid rgba(139, 95, 255, 0.6)',
+                      color: 'rgba(139, 95, 255, 0.9)',
+                      padding: '12px 24px',
+                      borderRadius: '8px',
+                      fontWeight: '600',
+                      fontSize: '16px',
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease',
+                      textTransform: 'uppercase',
+                      letterSpacing: '1px'
+                    }}
+                    onMouseOver={(e) => {
+                      e.target.style.background = 'rgba(139, 95, 255, 0.1)';
+                      e.target.style.borderColor = 'rgba(139, 95, 255, 0.8)';
+                      e.target.style.color = 'rgba(139, 95, 255, 1)';
+                      e.target.style.transform = 'translateY(-2px)';
+                      e.target.style.boxShadow = '0 5px 15px rgba(139, 95, 255, 0.3)';
+                    }}
+                    onMouseOut={(e) => {
+                      e.target.style.background = 'transparent';
+                      e.target.style.borderColor = 'rgba(139, 95, 255, 0.6)';
+                      e.target.style.color = 'rgba(139, 95, 255, 0.9)';
+                      e.target.style.transform = 'translateY(0)';
+                      e.target.style.boxShadow = 'none';
+                    }}
+                    >
+                      Get Started
+                    </button>
                   </Link>
                   <Link href="/about" style={{ textDecoration: 'none' }}>
-                    <BrandButton className="outline">Learn More</BrandButton>
+                    <button style={{
+                      background: 'transparent',
+                      border: '2px solid rgba(139, 95, 255, 0.6)',
+                      color: 'rgba(139, 95, 255, 0.9)',
+                      padding: '12px 24px',
+                      borderRadius: '8px',
+                      fontWeight: '600',
+                      fontSize: '16px',
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease',
+                      textTransform: 'uppercase',
+                      letterSpacing: '1px'
+                    }}
+                    onMouseOver={(e) => {
+                      e.target.style.background = 'rgba(139, 95, 255, 0.1)';
+                      e.target.style.borderColor = 'rgba(139, 95, 255, 0.8)';
+                      e.target.style.color = 'rgba(139, 95, 255, 1)';
+                      e.target.style.transform = 'translateY(-2px)';
+                      e.target.style.boxShadow = '0 5px 15px rgba(139, 95, 255, 0.3)';
+                    }}
+                    onMouseOut={(e) => {
+                      e.target.style.background = 'transparent';
+                      e.target.style.borderColor = 'rgba(139, 95, 255, 0.6)';
+                      e.target.style.color = 'rgba(139, 95, 255, 0.9)';
+                      e.target.style.transform = 'translateY(0)';
+                      e.target.style.boxShadow = 'none';
+                    }}
+                    >
+                      Learn More
+                    </button>
                   </Link>
                 </div>
               </div>
