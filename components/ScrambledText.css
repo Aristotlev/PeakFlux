@@ -1,0 +1,162 @@
+/* 
+ * Scrambled Text Effect Styling
+ * 
+ * This file contains the styles for the scrambled text animations used throughout the website.
+ * These effects add an interactive, tech-like feel to descriptive text elements while maintaining
+ * readability and visual hierarchy.
+ * 
+ * Classes:
+ * - .scrambled-hero: Main hero section descriptions 
+ * - .scrambled-subtitle: Section subtitle descriptions
+ * - .scrambled-team: Team member bio descriptions
+ * - .scrambled-offers: Offers page descriptions
+ */
+
+.text-block {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit;
+  display: inline-block;
+  width: auto !important;
+  /* CRITICAL: Force consistent layout */
+  white-space: nowrap !important;
+  overflow: visible !important;
+  /* Disable problematic spacing inheritance */
+  letter-spacing: 0 !important;
+  word-spacing: 0 !important;
+  /* Lock font properties */
+  font-variant-numeric: normal;
+  font-feature-settings: normal;
+  /* Prevent layout shifts */
+  contain: layout;
+}
+
+.text-block p {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit;
+  display: inline !important;
+  /* Force stable layout */
+  white-space: nowrap !important;
+  letter-spacing: 0 !important;
+  word-spacing: 0 !important;
+  overflow: visible !important;
+}
+
+.char {
+  display: inline-block !important;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  /* CRITICAL: Prevent character collapse */
+  min-width: 0.6ch !important;
+  max-width: 2ch;
+  text-align: center;
+  /* Lock positioning */
+  position: relative !important;
+  vertical-align: baseline !important;
+  /* Disable transitions that cause glitches */
+  transition: none !important;
+  will-change: auto;
+  /* Force consistent spacing */
+  letter-spacing: 0 !important;
+  word-spacing: normal !important;
+  white-space: nowrap !important;
+  /* Prevent font rendering issues */
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  /* Force hardware acceleration off to prevent glitches */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Brand-specific styling for scrambled text */
+.scrambled-hero {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  margin: 1rem 0 2rem 0;
+}
+
+.scrambled-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.scrambled-team {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: left;
+  margin: 1rem 0;
+}
+
+.scrambled-offers {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0.5rem 0 1rem 0;
+}
+
+/* Ensure proper inheritance for section subtitles */
+.section-subtitle.scrambled-subtitle .text-block {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Ensure proper inheritance for offers subtitle */
+.offers-subtitle.scrambled-offers .text-block {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+/* Enhanced hover effects for all scrambled text */
+.scramble-text:hover {
+  color: rgba(179, 136, 255, 0.95) !important;
+  transition: color 0.3s ease;
+}
+
+/* Improved animation smoothness */
+.scramble-text .text-block {
+  transition: all 0.3s ease;
+  animation: textAppear 0.8s ease-out;
+}
+
+.scramble-text .text-block:hover {
+  filter: brightness(1.1) saturate(1.2);
+}
+
+/* Animation for text appearance */
+@keyframes textAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Special glow effect on hover for better visibility */
+.scramble-text:hover .text-block {
+  text-shadow: 
+    0 0 5px rgba(179, 136, 255, 0.3),
+    0 0 10px rgba(179, 136, 255, 0.2),
+    0 0 15px rgba(179, 136, 255, 0.1);
+}

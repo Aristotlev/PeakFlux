@@ -1,0 +1,138 @@
+.button {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 28px;
+  font-size: 16px;
+  color: rgba(139, 95, 255, 0.95);
+  border: 2px solid rgba(139, 95, 255, 0.6);
+  border-radius: 25px;
+  background: linear-gradient(135deg,
+    rgba(46, 16, 101, 0.8),
+    rgba(75, 0, 130, 0.7),
+    rgba(58, 21, 126, 0.8)
+  );
+  font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+  text-shadow: 0 0 8px rgba(139, 95, 255, 0.6);
+  box-shadow: 
+    0 0 0 1px rgba(139, 95, 255, 0.3),
+    0 0 20px rgba(139, 95, 255, 0.2),
+    0 8px 25px rgba(46, 16, 101, 0.4),
+    inset 0 0 15px rgba(139, 95, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background: linear-gradient(135deg,
+    rgba(139, 95, 255, 0.4),
+    rgba(179, 136, 255, 0.3),
+    rgba(255, 107, 157, 0.2)
+  );
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, 
+    rgba(139, 95, 255, 0.4), 
+    rgba(179, 136, 255, 0.3), 
+    rgba(255, 107, 157, 0.2), 
+    rgba(139, 95, 255, 0.4)
+  );
+  background-size: 400% 400%;
+  border-radius: 27px;
+  z-index: -2;
+  animation: gradientShift 3s ease-in-out infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.button:hover::before {
+  scale: 3.5;
+}
+
+.button:hover::after {
+  opacity: 1;
+  animation: gradientShift 1s ease-in-out infinite;
+}
+
+.button:hover {
+  color: rgba(255, 255, 255, 0.98);
+  scale: 1.12;
+  border-color: rgba(139, 95, 255, 0.9);
+  box-shadow: 
+    0 0 0 2px rgba(139, 95, 255, 1),
+    0 0 30px rgba(139, 95, 255, 0.8),
+    0 0 60px rgba(179, 136, 255, 0.6),
+    0 0 100px rgba(255, 107, 157, 0.4),
+    0 20px 40px rgba(46, 16, 101, 0.7),
+    inset 0 0 30px rgba(139, 95, 255, 0.15);
+  filter: brightness(1.4) saturate(1.6);
+  text-shadow: 
+    0 0 10px rgba(139, 95, 255, 0.9),
+    0 0 20px rgba(179, 136, 255, 0.7);
+  transform: translateY(-4px);
+}
+
+.button:active {
+  scale: 1.05;
+  transform: translateY(-2px);
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Variant classes for different button types */
+.primary {
+  background: linear-gradient(135deg,
+    rgba(46, 16, 101, 0.95),
+    rgba(75, 0, 130, 0.9),
+    rgba(58, 21, 126, 0.95)
+  ) !important;
+  color: rgba(255, 255, 255, 0.98) !important;
+  border-color: rgba(139, 95, 255, 0.8) !important;
+}
+
+.secondary {
+  background: linear-gradient(135deg,
+    rgba(46, 16, 101, 0.3),
+    rgba(75, 0, 130, 0.25),
+    rgba(58, 21, 126, 0.3)
+  ) !important;
+  border-color: rgba(139, 95, 255, 0.5) !important;
+}
+
+.outline {
+  background: transparent !important;
+  border-color: rgba(139, 95, 255, 0.7) !important;
+  color: rgba(139, 95, 255, 0.9) !important;
+}
+
+.outline:hover {
+  background: linear-gradient(135deg,
+    rgba(46, 16, 101, 0.2),
+    rgba(75, 0, 130, 0.15),
+    rgba(58, 21, 126, 0.2)
+  ) !important;
+}
